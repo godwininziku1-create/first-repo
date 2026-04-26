@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — AFRICA YOUTH ALIVE PROJECT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6O3sX6Y7GQv+gWQk5xK1+6p3Y6G1G1K1J6D1p1x1G1K1J6D1p1x1G1K1J6D1p1x1" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/sopot.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html" class="brand"><img src="assets/images/d1XpYEew_400x400.jpg" alt="Africa Youth Alive Project logo" class="site-logo"/><span class="site-title">AFRICA YOUTH ALIVE PROJECT</span></a></h1>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero contact-hero" style="background-image:linear-gradient(180deg, rgba(11,59,32,0.46), rgba(47,122,74,0.18)), url('assets/images/images-5.jpg'); background-size:cover; background-position:center;">
+      <div class="hero-inner container">
+        <div class="hero-overlay">
+          <h1>Let’s Plant the Seeds of Change Together.</h1>
+          <p class="lead">Whether you are a youth looking for mentorship or a partner ready to invest in Africa's future, we are listening.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info container">
+      <h3>Contact Information</h3>
+      <p class="lead">Reach out via WhatsApp, email, phone, or visit our hub.</p>
+      <div class="card contact-details">
+        <p><strong>Address:</strong> Fort Portal, Rukiidi III Street, DAJ Plaza, Uganda</p>
+        <p><strong>Phone:</strong> +256 750 000 082</p>
+        <p><strong>Alternate:</strong> +43 676 630 8338</p>
+        <p><strong>Email:</strong> <a href="mailto:africayouthhopealiveproject@gmail.com">africayouthhopealiveproject@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a class="btn" href="https://wa.me/256750000082" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+      </div>
+    </section>
+
+    <section class="contact-grid container">
+      <div class="col contact-main">
+        <section class="smart-contact">
+          <h3>Smart Contact — Send a message</h3>
+          <form id="smart-contact-form" class="smart-form" action="#" method="POST">
+            <label class="floating">
+              <select id="who" name="who" required>
+                <option value="">Who are you?</option>
+                <option value="youth">I am a Youth (Mentorship/Digi Girls)</option>
+                <option value="partner">I am a Potential Partner/Donor</option>
+                <option value="other">Other</option>
+              </select>
+              <span>Who are you?</span>
+            </label>
+
+            <div id="youth-fields" class="conditional-group" aria-hidden="true">
+              <label class="floating"><input type="number" name="age" min="10" max="100" /><span>Age</span></label>
+              <label class="floating"><input type="text" name="location" /><span>Location (City / District)</span></label>
+            </div>
+
+            <div id="partner-fields" class="conditional-group" aria-hidden="true">
+              <label class="floating"><input type="text" name="organization" /><span>Organization name</span></label>
+              <label class="floating"><input type="text" name="interest_area" /><span>Interest area</span></label>
+            </div>
+
+            <label class="floating"><input type="text" name="name" required /><span>Your name</span></label>
+            <label class="floating"><input type="email" name="email" required /><span>Your email</span></label>
+            <label class="floating"><textarea name="message" rows="4"></textarea><span>Message</span></label>
+
+            <div class="anti-spam">
+              <label class="floating"><input id="math-answer" name="math" required /><span class="math-question">What is 5 + 2?</span></label>
+            </div>
+
+            <button class="btn" type="submit">Send Message</button>
+            <p class="privacy-promise">We promise to keep your data safe and only use it to connect you with our mission.</p>
+          </form>
+        </section>
+      </div>
+
+      <aside class="col contact-side">
+        <section id="contact-map" class="card contact-map">
+          <h4>Our Location</h4>
+          <div class="map-illustration" aria-hidden="false">
+            <iframe class="map-embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rukiidi+III+Street+DAJ+Plaza+Fort+Portal+Uganda&output=embed" title="Interactive map showing DAJ Plaza, Fort Portal"></iframe>
+            <noscript>
+              <p><a href="https://www.google.com/maps/search/?api=1&query=Rukiidi+III+Street+DAJ+Plaza+Fort+Portal+Uganda" target="_blank" rel="noopener">Open map in Google Maps</a></p>
+            </noscript>
+          </div>
+          <p class="small">Fort Portal, Rukiidi III Street, DAJ Plaza, Uganda</p>
+          <p><a id="open-google-maps" class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Rukiidi+III+Street+DAJ+Plaza+Fort+Portal+Uganda" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        </section>
+      </aside>
+
+    </section>
+
+    <section class="social-voices container">
+      <h3>Hear Our Progress</h3>
+      <p class="lead">Follow us to hear the voices and success stories of the youth we empower.</p>
+      <div class="social-large">
+        <a class="social-ig" href="https://www.instagram.com/ayhap_?igsh=bnV0dGRpdm4wZXp0&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="social-x" href="https://x.com/ayhap_?s=21" target="_blank" rel="noopener" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+        <a class="social-li" href="https://linkedin.com/company/africayouth" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
+  </main>
+  </main>
+  <footer id="site-footer" class="site-footer">
+    <div class="container footer-inner">
+      <div class="col footer-about">
+        <div class="footer-logo"><img src="assets/images/d1XpYEew_400x400.jpg" alt="Africa Youth Alive Project logo" class="site-logo"/></div>
+        <h4>Africa Youth Hope Alive</h4>
+        <p>Empowering and inspiring African youth through mentorship, digital skills training, environmental stewardship, and sustainable agriculture.</p>
+        <p class="note">Building skills, planting hope.</p>
+      </div>
+      <div class="col footer-contact">
+        <h5>Get In Touch</h5>
+        <p><i class="fas fa-map-marker-alt"></i> Fort Portal, Rukiidi III Street, DAJ Plaza, Uganda</p>
+        <p><i class="fas fa-phone"></i> +256 750 000 082</p>
+        <p><i class="fas fa-phone"></i> +43 676 630 8338</p>
+        <p><i class="fas fa-envelope"></i> africayouthhopealiveproject@gmail.com</p>
+      </div>
+      <div class="col footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#team">Team</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div class="col footer-follow">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="https://facebook.com/africayouthhopealive" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/ayhap_?s=21" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/ayhap_?igsh=bnV0dGRpdm4wZXp0&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@africayouthhopealive_p?_r=1&_t=ZS-95q6ANTPNnp" aria-label="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+          <a href="https://youtube.com/africayouth" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+          <a href="https://linkedin.com/company/africayouth" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <form class="newsletter-form" data-formspree="YOUR_FORM_ID" action="#" method="POST">
+          <label for="footer-news-email-c" class="sr-only">Email</label>
+          <input id="footer-news-email-c" name="email" type="email" placeholder="Your email" required />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="row">
+        <div class="col"><small>© 2026 Africa Youth Hope Alive — All rights reserved.</small></div>
+        <div class="col" style="text-align:right"><a href="#top">Back to top</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header"><button class="modal-close btn">Close</button></div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
