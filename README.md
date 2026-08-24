@@ -31,3 +31,6 @@ python -m http.server 8000
 Next steps (optional): wire contact form, add real photos, expand content, and deploy.
 # africayouthlive
 # africayouth
+
+Repository: first-repo
+Maintainer: Godwin's
