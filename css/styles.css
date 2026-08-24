@@ -41,7 +41,7 @@ body{margin:0;background:var(--bg);color:#123;line-height:1.5}
 .site-header{position:sticky;top:0;z-index:60}
 .site-header.scrolled{box-shadow:0 6px 18px rgba(10,20,10,0.12)}
 .hero{position:relative;min-height:520px;display:flex;align-items:center;padding:0}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,6,0.5),rgba(4,8,6,0.18));z-index:1}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,6,0.18),rgba(4,8,6,0.06));z-index:1}
 .hero-inner{position:relative;z-index:2;padding:4rem 0}
 
 /* Improve perceived image quality site-wide and ensure vivid hero text */
@@ -51,7 +51,7 @@ img{max-width:100%;height:auto;display:block}
 
 /* Hero overlay for strong text contrast over background images */
 .hero{position:relative;background-size:cover;background-position:center}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,6,0.56),rgba(4,8,6,0.18));pointer-events:none;z-index:1}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,6,0.18),rgba(4,8,6,0.06));pointer-events:none;z-index:1}
 .hero .hero-inner,.hero .hero-overlay{position:relative;z-index:2}
 .hero .hero-overlay h1,.hero .hero-overlay h2{color:#fff;text-shadow:0 8px 28px rgba(0,0,0,0.65);line-height:1.03}
   .hero .lead{color:#ffffff;font-weight:600;text-shadow:0 8px 26px rgba(0,0,0,0.72)}
@@ -74,14 +74,16 @@ img{max-width:100%;height:auto;display:block}
 .background-profile .profile-card .profile-quote::first-letter{float:left;font-size:4.2rem;line-height:0.72;margin-right:.5rem;color:var(--savannah-gold);font-weight:700;text-shadow:0 6px 18px rgba(0,0,0,0.6)}
 @media(max-width:720px){.background-profile .profile-card{padding:1.25rem}.background-profile .profile-card .profile-quote::first-letter{font-size:3rem}}
 
-/* Improve text visibility on hero and key headings */
+/* Improve text visibility on hero and key headings
+   - remove boxed backgrounds so hero images show clearly
+   - keep strong text color and shadow for contrast */
 .hero h1, .hero h2, .hero .lead, .hero p, .hero .hero-content * {
-  background: rgba(4,8,6,0.6);
-  display: inline-block;
-  padding: 0.15rem 0.5rem;
-  border-radius: 6px;
+  background: transparent;
+  display: block;
+  padding: 0;
+  border-radius: 0;
   color: #ffffff;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  text-shadow: 0 6px 18px rgba(0,0,0,0.55);
 }
 
 /* Reusable utility for applying a dark, semi-opaque text background */
@@ -158,7 +160,7 @@ img{max-width:100%;height:auto;display:block}
 .hero-slider{position:relative;overflow:hidden;border-radius:12px}
 .hero-slide{min-height:340px;display:flex;align-items:center;padding:2rem;background-size:cover;background-position:center;transition:transform .6s ease,opacity .6s ease;opacity:0;transform:translateX(20px)}
 .hero-slide.active{opacity:1;transform:none}
-.hero-overlay{max-width:920px;margin:0 auto;text-align:center;padding:2rem;border-radius:12px;background:rgba(255,255,255,0.02);backdrop-filter:blur(6px);color:#fff}
+.hero-overlay{max-width:920px;margin:0 auto;text-align:center;padding:2rem;border-radius:12px;background:transparent;backdrop-filter:none;color:#fff}
 .hero-overlay h1{font-size:2.6rem;margin:0 0 .6rem}
 .hero-overlay .lead{font-size:1.05rem;opacity:0.95}
 .hero-controls{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;padding:0 1rem}
@@ -567,17 +569,27 @@ a:focus{outline:3px solid rgba(123,191,106,0.25);outline-offset:3px}
 }
 
 /* Pillars grid (interactive cards) */
-.pillars-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:0.6rem}
-.pillar-card{background:var(--card);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;position:relative}
-.pillar-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(12,24,12,0.08)}
-.pillar-media img{width:100%;height:140px;object-fit:cover;display:block}
-.pillar-body{padding:0.9rem}
-.pillar-body h4{margin:.25rem 0 .45rem}
-.pillar-body p{margin:0 0 .8rem;color:var(--muted)}
-.pillar-link{opacity:0;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease;display:inline-block}
+.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:0.8rem;align-items:stretch}
+.pillar-card{background:var(--card);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;position:relative;min-height:420px}
+.pillar-card:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(12,24,12,0.10)}
+.pillar-media img{width:100%;height:260px;object-fit:cover;display:block;border-radius:0}
+.pillar-body{padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
+.pillar-body h4{margin:.5rem 0 .6rem;font-size:1.15rem}
+.pillar-body p{margin:0 0 .9rem;color:var(--muted);line-height:1.6}
+.pillar-link{opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease;display:inline-block}
 .pillar-card:hover .pillar-link{opacity:1;transform:none}
 
-@media(max-width:900px){.pillars-grid{grid-template-columns:1fr}}
+@media(max-width:1200px){
+  .pillars-grid{grid-template-columns:repeat(2,1fr)}
+  .pillar-media img{height:220px}
+  .pillar-card{min-height:360px}
+}
+
+@media(max-width:900px){
+  .pillars-grid{grid-template-columns:1fr}
+  .pillar-media img{height:180px}
+  .pillar-card{min-height:unset}
+}
 
 /* Mission - use soft bone / off-white background already defined (.below-hero-bg) */
 .mission-inner .mission-media{margin-top:1rem}
@@ -662,9 +674,21 @@ a:focus{outline:3px solid rgba(123,191,106,0.25);outline-offset:3px}
 /* Narrative Hero (Parallax) */
 .narrative-hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;margin-bottom:1rem}
 .narrative-hero .parallax-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:translateY(0);will-change:transform;z-index:1}
-.narrative-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,6,0.6),rgba(4,8,6,0.55));z-index:2}
+.narrative-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,6,0.18),rgba(4,8,6,0.06));z-index:2}
 .narrative-hero .hero-content{position:relative;z-index:3;text-align:center;color:#fff;padding:3rem 1rem}
 .narrative-hero .hero-content .lead{max-width:880px;margin:0 auto;font-size:1.15rem}
+
+/* Specific override: remove boxed background for text used in the About narrative hero */
+.narrative-hero .text-bg-contrast,
+.narrative-hero .hero-copy .text-bg-contrast,
+.narrative-hero h1.text-bg-contrast,
+.narrative-hero p.text-bg-contrast {
+  background: transparent !important;
+  padding: 0 !important;
+  display: inline !important;
+  border-radius: 0 !important;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.55);
+}
 
 /* Compass (Mission & Vision) */
 .compass-inner{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:stretch;margin:1.25rem 0}
